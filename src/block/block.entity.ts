@@ -13,4 +13,7 @@ export class BlockEntity {
 
   @Column({ name: 'component_type' })
   blockType: string;
+
+  @Column('jsonb')
+  styles: any;
 }

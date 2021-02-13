@@ -7,4 +7,6 @@ export class CreateBlockDto {
   readonly data: any;
 
   readonly parentBlockId: number;
+
+  readonly styles: any;
 }

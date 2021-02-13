@@ -23,6 +23,7 @@ export class BlockService {
                 id: block.id,
                 blockType: block.blockType,
                 data: block.data,
+                styles: block.styles,
                 childrenBlocks: createTree(blocks, block.id),
               } as IBlock),
           );
@@ -41,6 +42,7 @@ export class BlockService {
         data: blockData.data,
         parentBlockId: blockData.parentBlockId,
         blockType: blockData.blockType,
+        styles: blockData.styles,
       }),
     );
   }

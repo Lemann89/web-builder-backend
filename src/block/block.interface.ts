@@ -3,4 +3,5 @@ export interface IBlock {
   childrenBlocks: IBlock[];
   blockType: string;
   data?: any;
+  styles?: any;
 }
