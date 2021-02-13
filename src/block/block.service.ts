@@ -44,4 +44,8 @@ export class BlockService {
       }),
     );
   }
+
+  delete(id): Promise<any> {
+    return this.blockRepository.delete({ id });
+  }
 }

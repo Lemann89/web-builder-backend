@@ -1,4 +1,12 @@
-import { Body, Controller, Get, Param, Post, Put } from '@nestjs/common';
+import {
+  Body,
+  Controller,
+  Delete,
+  Get,
+  Param,
+  Post,
+  Put,
+} from '@nestjs/common';
 import { BlockService } from './block.service';
 import { BlockEntity } from './block.entity';
 import { CreateBlockDto } from './dto/create-block.dto';
@@ -20,5 +28,10 @@ export class BlockController {
   @Post()
   async createBlock(@Body() blockData: CreateBlockDto): Promise<BlockEntity> {
     return this.blockService.create(blockData);
+  }
+
+  @Delete(':id')
+  async deleteBlock(@Param() params): Promise<void> {
+    return await this.blockService.delete(params.id);
   }
 }
